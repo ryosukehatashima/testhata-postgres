@@ -1,4 +1,4 @@
-# PostgreSQL + PHP on Heroku
+# PostgreSQL + PHP on Heroku 
 
 This otherwise entirely useless app demonstrates how to connect to your 
 Heroku PostgreSQL database in a PHP app.
@@ -25,3 +25,5 @@ PHP apps don't get a database by default, so you have to add it manually:
 Once that's done, you can visit your app with:
 
     $ heroku open
+
+aaa
