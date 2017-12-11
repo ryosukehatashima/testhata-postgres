@@ -1,5 +1,2 @@
-CREATE TABLE testtbl (
-	id int,
-	date int,
-	size int
-);
+select id, date, size
+from testtbl;
