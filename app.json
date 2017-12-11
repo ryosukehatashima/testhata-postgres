@@ -3,6 +3,6 @@
     "description": "dbtest",
     "addons": ["heroku-postgresql"],
     "scripts": {
-	"postdeploy": "php install.php"
+	"postdeploy": "php install/install.php"
     }
 }
