@@ -3,7 +3,7 @@
 
 // create the database
 $url = parse_url(getenv('CLEARDB_DATABASE_URL') ? getenv('CLEARDB_DATABASE_URL') : getenv('DATABASE_URL'));
-echo "cp1'";
+echo '<p>cp1</p>';
 $type = $url['scheme'] == 'postgres' ? 'pgsql' : 'mysql';
 $sql = file_get_contents('install/'.$type.'.sql');
 
