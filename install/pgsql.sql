@@ -1,2 +1,2 @@
-select id, date, size
-from testtbl;
+insert into testtbl values
+('1', '7', '12');
