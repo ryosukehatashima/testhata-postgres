@@ -1,5 +1,8 @@
 {
     "name": "dbtest",
     "description": "dbtest",
-    "addons": ["heroku-postgresql"]
+    "addons": ["heroku-postgresql"],
+    "scripts": {
+	"postdeploy": "php install/install.php"
+    }
 }

@@ -17,8 +17,6 @@ $tbl_name = "postgres_test"
 print "<pre>\n";
 if (!pg_num_rows($result)) {
   print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
-  $psql foo -c 'create table t1 (a int, b int);'
-  $psql foo -c "insert into t1(a, b) values(1,1),(2,2);"
 } else {
   print "Tables in your database:\n";
   while ($row = pg_fetch_row($result)) { print("- $row[0]\n"); }
