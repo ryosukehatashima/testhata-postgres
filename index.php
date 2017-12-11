@@ -12,7 +12,15 @@ $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
 
 $conn = pg_pconnect("dbname=d4agtqbk4gjt8r");
+if (!$conn) {
+  echo "An error occurred.\n";
+  exit;
+}
 $result = pg_query($conn,'select id from testtbl');
+if (!$result) {
+  echo "An error occurred.\n";
+  exit;
+}
 $rows = pg_fetch_array($result);
 print('id='.$rows['id']);
 //print('date='.$rows['date']);
