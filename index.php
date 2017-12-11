@@ -11,7 +11,8 @@ $db = new \PDO($type.':host='.$url['host'].($url['port'] ? ';port='.$url['port']
 $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
 
-$conn = pg_pconnect("dbname=d4agtqbk4gjt8r");
+//$conn = pg_pconnect("dbname=d4agtqbk4gjt8r");
+$conn = pg_pconnect("dbname=.substr($url['path'], 1)");
 if (!$conn) {
   echo "An error occurred1.\n";
   exit;
