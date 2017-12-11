@@ -13,12 +13,12 @@ $db->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
 
 $conn = pg_pconnect("dbname=d4agtqbk4gjt8r");
 if (!$conn) {
-  echo "An error occurred.\n";
+  echo "An error occurred1.\n";
   exit;
 }
 $result = pg_query($conn,'select id from testtbl');
 if (!$result) {
-  echo "An error occurred.\n";
+  echo "An error occurred2.\n";
   exit;
 }
 $rows = pg_fetch_array($result);
