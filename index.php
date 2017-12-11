@@ -13,7 +13,11 @@ $db->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
 
 $conn = pg_pconnect("dbname=d4agtqbk4gjt8r");
 $result = pg_query($conn,$sql);
-echo '<p>$result</p>';
+$rows = pg_fetch_array($result);
+print('id='.$rows['id']);
+print('date='.$rows['date']);
+print('size='.$rows['size']);
+//echo '<p>$result</p>';
 
 //$db->exec($sql);
 ?>
