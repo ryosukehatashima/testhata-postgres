@@ -10,5 +10,10 @@ $sql = file_get_contents('install/'.$type.'.sql');
 $db = new \PDO($type.':host='.$url['host'].($url['port'] ? ';port='.$url['port'] : '').';dbname='.substr($url['path'], 1), $url['user'], $url['pass'], $options);
 $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
-$db->exec($sql);
+
+$conn = pg_pconnect("dbname=d4agtqbk4gjt8r");
+$result = pg_query($conn,$sql);
+echo '<p>$result</p>';
+
+//$db->exec($sql);
 ?>
