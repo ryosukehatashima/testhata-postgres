@@ -3,6 +3,7 @@
 
 // create the database
 $url = parse_url(getenv('CLEARDB_DATABASE_URL') ? getenv('CLEARDB_DATABASE_URL') : getenv('DATABASE_URL'));
+echo "cp1'";
 $type = $url['scheme'] == 'postgres' ? 'pgsql' : 'mysql';
 $sql = file_get_contents('install/'.$type.'.sql');
 
@@ -10,3 +11,4 @@ $db = new \PDO($type.':host='.$url['host'].($url['port'] ? ';port='.$url['port']
 $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
 $db->exec($sql);
+?>
