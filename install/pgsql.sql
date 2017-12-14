@@ -1,2 +1,5 @@
-insert into testtbl values
-('2', '7', '12');
+CREATE TABLE testtbl02 (
+	id int,
+	date int,
+	size int
+);
