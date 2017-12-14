@@ -1,4 +1,4 @@
-CREATE TABLE testtbl02 (
+CREATE TABLE testtbl03 (
 	id int,
 	date int,
 	size int
