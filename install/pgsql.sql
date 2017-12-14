@@ -1,2 +1,2 @@
 insert into testtbl values
-('1', '7', '12');
+('2', '7', '12');

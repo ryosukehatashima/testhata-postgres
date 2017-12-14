@@ -11,22 +11,5 @@ $db = new \PDO($type.':host='.$url['host'].($url['port'] ? ';port='.$url['port']
 $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
 
-$conn = pg_pconnect("dbname=postgresql-vertical-59416");
-//$conn = pg_pconnect("dbname=substr($url['path'], 1)");
-if (!$conn) {
-  echo "An error occurred1.\n";
-  exit;
-}
-$result = pg_query($conn,'select id from testtbl');
-if (!$result) {
-  echo "An error occurred2.\n";
-  exit;
-}
-$rows = pg_fetch_array($result);
-print('id='.$rows['id']);
-//print('date='.$rows['date']);
-//print('size='.$rows['size']);
-//echo '<p>$result</p>';
-
-//$db->exec($sql);
+$db->exec($sql);
 ?>
