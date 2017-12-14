@@ -1,5 +1,4 @@
 {
     "name": "dbtest",
-    "description": "dbtest",
-    "addons": ["heroku-postgresql"]
+    "description": "dbtest"
 }
